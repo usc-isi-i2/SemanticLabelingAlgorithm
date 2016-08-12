@@ -1,0 +1,1261 @@
+{
+  "description": null,
+  "graph": {
+    "nodes": [
+      {
+        "modelIds": null,
+        "type": "InternalNode",
+        "id": "http://schema.dig.isi.edu/ontology/Firearm1",
+        "label": {
+          "uri": "http://schema.dig.isi.edu/ontology/Firearm"
+        }
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN805",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.25176067599779106,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.25056421099854326,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1990572269547395,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1990572269547395,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.org/category"
+            },
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/Firearm"
+            },
+            "hNodeId": "HN805",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN805"
+        },
+        "columnName": "Shop0265",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN805"
+      },
+      {
+        "modelIds": null,
+        "type": "InternalNode",
+        "id": "http://schema.org/CreativeWork1",
+        "label": {
+          "uri": "http://schema.org/CreativeWork"
+        }
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN785",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1915864584717092,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1791849445816731,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.17405625232117133,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.13238767345370683,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.org/telephone"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            },
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "hNodeId": "HN785",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN785"
+        },
+        "columnName": "000369",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN785"
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN797",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1839508637198496,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.17570532614429749,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.09570936144561296,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.09174976868075908,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/acceptedPaymentMethod"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            },
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "hNodeId": "HN797",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN797"
+        },
+        "columnName": "FFL0372",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN797"
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN807",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.5315158526166465,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/price"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.4018393874935566,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.21442253308492207,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/phoneAreaCode"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1215804654397231,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            },
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "hNodeId": "HN807",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN807"
+        },
+        "columnName": "bozeman0965",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN807"
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN809",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.252382574909359,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.24961469824472385,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.20112516053602528,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1990572269547395,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/datePosted"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1990572269547395,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/identifier"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            },
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "hNodeId": "HN809",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN809"
+        },
+        "columnName": "file_name",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN809"
+      },
+      {
+        "modelIds": null,
+        "type": "InternalNode",
+        "id": "http://schema.org/Offer1",
+        "label": {
+          "uri": "http://schema.org/Offer"
+        }
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN801",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.3208080167723612,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.13582134725074277,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/identifier"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.12909924034719872,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.org/telephone"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.12878027617527987,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/identifier"
+            },
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "hNodeId": "HN801",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN801"
+        },
+        "columnName": "Post0326",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN801"
+      },
+      {
+        "modelIds": null,
+        "type": "InternalNode",
+        "id": "http://schema.org/Place1",
+        "label": {
+          "uri": "http://schema.org/Place"
+        }
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN791",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.2560462477573081,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.2560462477573081,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1990572269547395,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.11274640223677204,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/Firearm"
+            },
+            "type": {
+              "uri": "http://schema.org/itemCondition"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.11274640223677204,
+            "domain": {
+              "uri": "http://schema.org/Place"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.org/description"
+            },
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "hNodeId": "HN791",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN791"
+        },
+        "columnName": "Ammunition1476",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN791"
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN795",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.2560462477573081,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.24055552999417912,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.19556809368756312,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.17812524913975689,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/Firearm"
+            },
+            "type": {
+              "uri": "http://schema.org/category"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.org/description"
+            },
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "hNodeId": "HN795",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN795"
+        },
+        "columnName": "Events1485",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN795"
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN799",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1990572269547395,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.18529940065876846,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.18010359986384783,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.09489217140240302,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/expires"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.09489217140240302,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/identifier"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.org/description"
+            },
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "hNodeId": "HN799",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN799"
+        },
+        "columnName": "Firearms0273",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN799"
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN787",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.2514668999773757,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.2084066340296699,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.20112516053602528,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.1659321817722005,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/Firearm"
+            },
+            "type": {
+              "uri": "http://schema.org/itemCondition"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.org/name"
+            },
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "hNodeId": "HN787",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN787"
+        },
+        "columnName": "0021",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN787"
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN803",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.5143088310086893,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/price"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.5129843876938662,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/PersonOrOrganization"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/phoneAreaCode"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.44733219305610666,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.13209529447338675,
+            "domain": {
+              "uri": "http://schema.dig.isi.edu/ontology/Firearm"
+            },
+            "type": {
+              "uri": "http://schema.org/category"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.org/price"
+            },
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "hNodeId": "HN803",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN803"
+        },
+        "columnName": "Price0364",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN803"
+      },
+      {
+        "modelIds": null,
+        "type": "InternalNode",
+        "id": "http://schema.org/Offer2",
+        "label": {
+          "uri": "http://schema.org/Offer"
+        }
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN789",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.252382574909359,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.252382574909359,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.2008272100703412,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.13285191787447434,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/identifier"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.org/name"
+            },
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "hNodeId": "HN789",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN789"
+        },
+        "columnName": "Ads0988",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN789"
+      },
+      {
+        "modelIds": null,
+        "hNodeId": "HN793",
+        "learnedSemanticTypes": [
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.2185732204237175,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.17171590936958253,
+            "domain": {
+              "uri": "http://schema.org/CreativeWork"
+            },
+            "type": {
+              "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.160432737638392,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/description"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.08888627099517961,
+            "domain": {
+              "uri": "http://schema.org/Place"
+            },
+            "type": {
+              "uri": "http://schema.org/name"
+            }
+          },
+          {
+            "origin": "RFModel",
+            "confidenceScore": 0.08888627099517961,
+            "domain": {
+              "uri": "http://schema.org/Offer"
+            },
+            "type": {
+              "uri": "http://schema.org/datePosted"
+            }
+          }
+        ],
+        "userSemanticTypes": [
+          {
+            "origin": "User",
+            "type": {
+              "uri": "http://schema.org/name"
+            },
+            "domain": {
+              "uri": "http://schema.org/Place"
+            },
+            "hNodeId": "HN793",
+            "confidenceScore": 1.0
+          }
+        ],
+        "label": {
+          "uri": "HN793"
+        },
+        "columnName": "BLK0354",
+        "rdfLiteralType": null,
+        "type": "ColumnNode",
+        "id": "HN793"
+      }
+    ],
+    "links": [
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/category"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.dig.isi.edu/ontology/Firearm1---http://schema.org/category---HN805"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/CreativeWork1---http://schema.dig.isi.edu/ontology/Fragment---HN785"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/CreativeWork1---http://schema.dig.isi.edu/ontology/Fragment---HN797"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/CreativeWork1---http://schema.dig.isi.edu/ontology/Fragment---HN807"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.dig.isi.edu/ontology/Fragment"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/CreativeWork1---http://schema.dig.isi.edu/ontology/Fragment---HN809"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.dig.isi.edu/ontology/identifier"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.dig.isi.edu/ontology/identifier---HN801"
+      },
+      {
+        "objectPropertyType": "Direct",
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/availableAtOrFrom"
+        },
+        "modelIds": null,
+        "type": "ObjectPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/availableAtOrFrom---http://schema.org/Place1"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/description"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/description---HN791"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/description"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/description---HN795"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/description"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/description---HN799"
+      },
+      {
+        "objectPropertyType": "Indirect",
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/itemOffered"
+        },
+        "modelIds": null,
+        "type": "ObjectPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/itemOffered---http://schema.dig.isi.edu/ontology/Firearm1"
+      },
+      {
+        "objectPropertyType": "Indirect",
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/mainEntityOfPage"
+        },
+        "modelIds": null,
+        "type": "ObjectPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/mainEntityOfPage---http://schema.org/CreativeWork1"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/name"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/name---HN787"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/price"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/price---HN803"
+      },
+      {
+        "objectPropertyType": "None",
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/relatedTo"
+        },
+        "modelIds": null,
+        "type": "ObjectPropertyLink",
+        "id": "http://schema.org/Offer1---http://schema.org/relatedTo---http://schema.org/Offer2"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/name"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/Offer2---http://schema.org/name---HN789"
+      },
+      {
+        "status": "ForcedByUser",
+        "weight": 0.01,
+        "keyInfo": "None",
+        "label": {
+          "uri": "http://schema.org/name"
+        },
+        "modelIds": null,
+        "type": "DataPropertyLink",
+        "id": "http://schema.org/Place1---http://schema.org/name---HN793"
+      }
+    ]
+  },
+  "mappingToSourceColumns": [
+    {
+      "sourceColumnId": "HN805",
+      "id": "HN805"
+    },
+    {
+      "sourceColumnId": "HN803",
+      "id": "HN803"
+    },
+    {
+      "sourceColumnId": "HN799",
+      "id": "HN799"
+    },
+    {
+      "sourceColumnId": "HN787",
+      "id": "HN787"
+    },
+    {
+      "sourceColumnId": "HN801",
+      "id": "HN801"
+    },
+    {
+      "sourceColumnId": "HN789",
+      "id": "HN789"
+    },
+    {
+      "sourceColumnId": "HN793",
+      "id": "HN793"
+    },
+    {
+      "sourceColumnId": "HN791",
+      "id": "HN791"
+    },
+    {
+      "sourceColumnId": "HN785",
+      "id": "HN785"
+    },
+    {
+      "sourceColumnId": "HN809",
+      "id": "HN809"
+    },
+    {
+      "sourceColumnId": "HN797",
+      "id": "HN797"
+    },
+    {
+      "sourceColumnId": "HN795",
+      "id": "HN795"
+    },
+    {
+      "sourceColumnId": "HN807",
+      "id": "HN807"
+    }
+  ],
+  "sourceColumns": [
+    {
+      "columnName": "Shop0265",
+      "hNodeId": "HN805",
+      "id": "HN805"
+    },
+    {
+      "columnName": "000369",
+      "hNodeId": "HN785",
+      "id": "HN785"
+    },
+    {
+      "columnName": "FFL0372",
+      "hNodeId": "HN797",
+      "id": "HN797"
+    },
+    {
+      "columnName": "bozeman0965",
+      "hNodeId": "HN807",
+      "id": "HN807"
+    },
+    {
+      "columnName": "file_name",
+      "hNodeId": "HN809",
+      "id": "HN809"
+    },
+    {
+      "columnName": "Post0326",
+      "hNodeId": "HN801",
+      "id": "HN801"
+    },
+    {
+      "columnName": "Ammunition1476",
+      "hNodeId": "HN791",
+      "id": "HN791"
+    },
+    {
+      "columnName": "Events1485",
+      "hNodeId": "HN795",
+      "id": "HN795"
+    },
+    {
+      "columnName": "Firearms0273",
+      "hNodeId": "HN799",
+      "id": "HN799"
+    },
+    {
+      "columnName": "0021",
+      "hNodeId": "HN787",
+      "id": "HN787"
+    },
+    {
+      "columnName": "Price0364",
+      "hNodeId": "HN803",
+      "id": "HN803"
+    },
+    {
+      "columnName": "Ads0988",
+      "hNodeId": "HN789",
+      "id": "HN789"
+    },
+    {
+      "columnName": "BLK0354",
+      "hNodeId": "HN793",
+      "id": "HN793"
+    }
+  ],
+  "id": "www.montanagunclassifieds.com_extractions_test_filtered.jl",
+  "name": "www.montanagunclassifieds.com_extractions_test_filtered.jl"
+}

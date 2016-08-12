@@ -1,0 +1,8 @@
+"artist_uri","description","title","image","year","technique_uri","technique","name","artist_appellation_uri","artist"
+"E21_Person---dev#classLink","E22_Man-Made_Object---P3_has_note","E35_Title---rdf-schema#label","E38_Image---dev#classLink","E52_Time-Span---P82_at_some_time_within","E55_Type---dev#classLink","E55_Type---rdf-schema#label","E78_Collection---rdf-schema#label","E82_Actor_Appellation---dev#classLink","E82_Actor_Appellation---rdf-schema#label"
+"","","","","","","","Armand Hammer Collection","",""
+"","","","","","","","Hammer Contemporary Collection","",""
+"","","","","","","","Hammer Daumier Collection","",""
+"","","","","","","","Grunwald Center Collection","",""
+"","","","","","","","Murphy Sculpture Garden","",""
+"","","","","","","","Hammer Video Library","",""
