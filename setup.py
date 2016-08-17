@@ -10,5 +10,6 @@ setup(
     author='Minh Pham',
     author_email='minhpham@usc.edu',
     description='Semantic Labeling: A domain-independent approach', install_requires=['scikit-learn', 'numpy', 'pandas',
-                                                                                      'elasticsearch', 'scipy']
+                                                                                      'elasticsearch', 'scipy',
+                                                                                      'pymongo']
 )

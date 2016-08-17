@@ -1,9 +1,8 @@
 from pymongo import MongoClient
 
 from pyspark import SparkContext
-from utils.relation_tests import greater, less, equal, contains
-from utils.similarity_tests import ks_distribution_sim, mw_histogram_sim, jaccard_num_sim, jaccard_str_sim, \
-    jaccard_name_sim, euclid_dist_sim
+from semantic_labeling.utils.similarity_tests import ks_distribution_sim, mw_histogram_sim, jaccard_num_sim, jaccard_str_sim, \
+    jaccard_name_sim
 
 sc = SparkContext()
 client = MongoClient()
