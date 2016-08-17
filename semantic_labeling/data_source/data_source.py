@@ -150,10 +150,10 @@ class DataSource:
 
 
 class Attribute:
-    def __init__(self, name, source_name):
+    def __init__(self, name, source_name, semantic_type=None):
         self.name = name
         self.source_name = source_name
-        self.semantic_type = None
+        self.semantic_type = semantic_type
 
         self.text = ""
 

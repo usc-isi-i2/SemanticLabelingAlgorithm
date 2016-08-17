@@ -6,7 +6,7 @@ from semantic_labeling.utils.similarity_tests import ks_distribution_sim, mw_his
 
 sc = SparkContext()
 client = MongoClient()
-db = client["main"]
+db = client["semantic_labeling"]
 
 DEBUG = False
 
