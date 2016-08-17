@@ -23,18 +23,6 @@ def jaccard_name_sim(str1, str2, num_fraction1, num_fraction2):
     return jaccard_similarity(tokens1, tokens2)
 
 
-def euclid_dist_sim(list1, list2, num_fraction1, num_fraction2):
-    if not list1 or not list2:
-        return 0
-    if len(list1) > len(list2):
-        list1 = list1[:len(list2)]
-    else:
-        list2 = list2[:len(list1)]
-    result = euclidean(list1, list2) / (linalg.norm(list1) + linalg.norm(list2))
-    # print result
-    return adjust_result(num_fraction1, num_fraction2, result)
-
-
 def jaccard_str_sim(list1, list2, num_fraction1, num_fraction2):
     if len(list1) > 0 and len(list2) > 0:
         return adjust_result(1 - num_fraction1, 1 - num_fraction2, jaccard_similarity(list1, list2))

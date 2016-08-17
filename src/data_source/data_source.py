@@ -6,17 +6,10 @@ import operator
 import os
 from collections import Counter, defaultdict
 
-import numpy as np
-import pandas as pd
-from cvxpy import Variable
-from scipy.io import savemat
-from sklearn import mixture
-
 from search_engine.indexer import Indexer
 from search_engine.searcher import Searcher
 from semantic_labeling import KS_NUM, JC_NUM, JC_TEXT, MW_HIST, JC_NAME, TF_TEXT, debug_writer, EL_DIST
 from semantic_labeling.feature_computing import compute_feature_vectors
-from semantic_labeling.quad_prog import quad_prog
 from utils.helpers import split_number_text
 
 
@@ -38,7 +31,7 @@ class DataSet:
             self.source_map[source.name] = source
 
     def is_saved(self):
-        return Indexer.check_index_exists(self.name)
+        return Indexer.check_set_indexed(self.name)
 
     def save(self):
         for source in self.source_map.values():
@@ -54,7 +47,6 @@ class DataSet:
                 labeled_sources, labeled_attrs_map = self.get_labeled_sources(idx, size)
                 print key, labeled_sources
                 prediction_map = source.label(self.name, labeled_attrs_map, classifier, labeled_sources)
-                prediction_map = source.resolve_tabular_labeling(prediction_map, self.name, labeled_sources)
                 for attr_name in prediction_map:
                     find = False
                     attr = source.attr_map[attr_name]
@@ -79,12 +71,11 @@ class DataSet:
     def test_with_different_set(self, classifier, set_name, labeled_sources):
         score = 0
         count = 0
-        labeled_attrs_map = Searcher.search_columns_data(set_name, labeled_sources)
+        labeled_attrs_map = Searcher.search_attribute_data(set_name, labeled_sources)
         for idx, key in enumerate(sorted(self.source_map.keys())):
             source = self.source_map[key]
             prediction_map = source.label(self.name, labeled_attrs_map, classifier, labeled_sources)
             print source.resolve_coocurence(prediction_map, self.name, labeled_sources)
-            # prediction_map = source.align_semantic_types(prediction_map)
             for attr_name in prediction_map:
                 find = False
                 attr = source.attr_map[attr_name]
@@ -103,10 +94,10 @@ class DataSet:
         mrr_score = score * 1.0 / count
         return mrr_score
 
-    def get_labeled_sources(self, idx=0, size=0, ):
+    def get_labeled_sources(self, idx=0, size=0):
         double_list = sorted(self.source_map.keys()) * 2
         labeled_sources = double_list[idx + 1: idx + size + 1]
-        labeled_attrs_map = Searcher.search_columns_data(self.name, labeled_sources)
+        labeled_attrs_map = Searcher.search_attribute_data(self.name, labeled_sources)
         return labeled_sources, labeled_attrs_map
 
     def generate_training_data(self, size_list):
@@ -140,45 +131,22 @@ class DataSource:
                         self.attr_map[attr_name].semantic_type = row[attr_name]
                     type_row = False
                 else:
-                    entity = Entity()
                     for attr_name in reader.fieldnames:
-                        entity.add_attribute(attr_name, row[attr_name])
                         self.attr_map[attr_name].add_value(row[attr_name])
-                    self.entity_list.append(entity)
 
-    def save(self, index_name):
-        self.learn_cooccurence(index_name)
+    def save(self, set_name):
         for attr in self.attr_map.values():
             if attr.semantic_type and attr.value_list:
-                attr.save(index_name)
+                attr.save(set_name)
 
-    def label(self, index_name, labeled_attrs_map, classifier, labeled_sources):
+    def label(self, set_name, labeled_attrs_map, classifier, labeled_sources):
         result = defaultdict(lambda: {})
         for attr in self.attr_map.values():
             if attr.semantic_type and attr.value_list:
-                prediction = attr.predict_type(index_name, labeled_sources, labeled_attrs_map, classifier)
+                prediction = attr.predict_type(set_name, labeled_sources, labeled_attrs_map, classifier)
                 for semantic_type in prediction:
                     result[attr.name][semantic_type["semantic_type"]] = semantic_type["prob"]
         return result
-
-    def learn_cooccurence(self, index_name):
-        for idx, attr1 in enumerate(self.attr_map.values()):
-            for attr2 in self.attr_map.values()[idx + 1:]:
-                Indexer.index_cooccurence(attr1.semantic_type, attr2.semantic_type, self.name, index_name)
-
-    def resolve_tabular_labeling(self, prediction_map, index_name, labeled_sources):
-        coocurence_map = Searcher.get_coocurence_map(index_name, labeled_sources)
-        return quad_prog(coocurence_map, prediction_map)
-
-
-class Entity:
-    def __init__(self, attributes=None):
-        if attributes is None:
-            attributes = {}
-        self.attributes = attributes
-
-    def add_attribute(self, name, value):
-        self.attributes[name] = value
 
 
 class Attribute:
@@ -219,11 +187,9 @@ class Attribute:
 
         if text:
             self.textual_list.append(text)
-            # self.text_len += len(text)
             self.text_len += 1
         if num:
             self.numeric_list.append(max([locale.atof(v[0]) for v in num]))
-            # self.num_len += sum([len(n) for n in num])
             self.num_len += 1
 
         self.value_list.append(value)
@@ -236,14 +202,14 @@ class Attribute:
                     EL_DIST: self.numeric_list, JC_NAME: self.name, TF_TEXT: self.text,}
         return json_obj
 
-    def compute_features(self, index_name, labeled_sources, labeled_attrs_map):
+    def compute_features(self, set_name, labeled_sources, labeled_attrs_map):
         self.prepare_data()
-        tf_idf_map = Searcher.search_similar_text_data(index_name, self.text, labeled_sources)
+        tf_idf_map = Searcher.search_similar_text_data(set_name, self.text, labeled_sources)
         feature_vectors = compute_feature_vectors(labeled_attrs_map, self.to_json(), tf_idf_map)
         return feature_vectors
 
-    def predict_type(self, index_name, labeled_sources, labeled_attrs_map, classifier):
-        feature_vectors = self.compute_features(index_name, labeled_sources, labeled_attrs_map)
+    def predict_type(self, set_name, labeled_sources, labeled_attrs_map, classifier):
+        feature_vectors = self.compute_features(set_name, labeled_sources, labeled_attrs_map)
         predictions = classifier.predict(feature_vectors)
 
         predictions = predictions.sort_values(["prob"], ascending=[False])
@@ -271,19 +237,19 @@ class Attribute:
         return final_predictions
 
     def save(self, index_name):
-        Indexer.index_column(self, self.source_name, index_name)
+        Indexer.store_attribute(self, self.source_name, index_name)
 
     def update(self, index_name):
-        result = Searcher.search_column_data_by_name(self.name, self.source_name, index_name)
+        result = Searcher.search_attribute_data_by_name(self.name, self.source_name, index_name)
         if result:
             value_list = result["value_list"]
             for value in value_list:
                 self.add_value(value)
-            Indexer.delete_column(self.name, self.source_name, index_name)
-        Indexer.index_column(self, self.source_name, index_name)
+            Indexer.delete_attribute(self.name, self.source_name, index_name)
+        Indexer.store_attribute(self, self.source_name, index_name)
 
     def delete(self, index_name):
-        Indexer.delete_column(self.name, self.source_name, index_name)
+        Indexer.delete_attribute(self.name, self.source_name, index_name)
 
     def prepare_data(self):
         if not self.is_prepared:
@@ -293,22 +259,8 @@ class Attribute:
                 [count * 1.0 / len(self.value_list) for count in Counter(self.value_list).values()])
             self.frequency_list = [[idx] * int(math.ceil(freq * 100)) for idx, freq in enumerate(self.frequency_list)]
             self.frequency_list = list(itertools.chain(*self.frequency_list))
-            # if max(self.frequency_list) > 50:
-            #     self.frequency_list = []
+            if max(self.frequency_list) > 50:
+                self.frequency_list = []
             self.text = " ".join(self.value_list)
 
 
-class TimeSeriesAttribute(Attribute):
-    def __init__(self, *args):
-        super(Attribute, self).__init__(*args)
-
-        self.time_series_list = []
-
-    def add_value(self, value, time):
-        timed_value = (time, value)
-        super(Attribute, self).add_value(value)
-
-        self.time_series_list.append(timed_value)
-
-    def prepare_data(self):
-        super(Attribute, self).prepare_data()

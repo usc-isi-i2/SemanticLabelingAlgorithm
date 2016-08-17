@@ -1,1 +1,5 @@
 .idea/
+debug.*
+*.mat
+result.txt
+train.csv

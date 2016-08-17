@@ -1,1 +1,4 @@
 museum2	{10: 0.4712191358024688}
+soccer2	soccer2	soccer2	soccer2	{10: 0.3100147275405006}
+soccer2	{10: 0.3100147275405006}
+soccer2	soccer2	soccer2	
