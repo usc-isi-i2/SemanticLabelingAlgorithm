@@ -1,7 +1,7 @@
 from collections import defaultdict
 
-from semantic_labeling import sc, similarity_test_map, TF_TEXT
-from utils.helpers import adjust_result
+from semantic_labeling.main import sc, similarity_test_map, TF_TEXT
+from semantic_labeling.utils.helpers import adjust_result
 
 
 def compute_feature_vectors(labeled_attrs_map, test_attr_map, tf_idf_map):

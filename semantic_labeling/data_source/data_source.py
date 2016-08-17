@@ -6,10 +6,10 @@ import operator
 import os
 from collections import Counter, defaultdict
 
-from search_engine.indexer import Indexer
-from search_engine.searcher import Searcher
-from semantic_labeling import KS_NUM, JC_NUM, JC_TEXT, MW_HIST, JC_NAME, TF_TEXT, debug_writer, EL_DIST
-from semantic_labeling.feature_computing import compute_feature_vectors
+from semantic_labeling.search_engine.indexer import Indexer
+from semantic_labeling.search_engine.searcher import Searcher
+from semantic_labeling.main import KS_NUM, JC_NUM, JC_TEXT, MW_HIST, JC_NAME, TF_TEXT, debug_writer, EL_DIST
+from semantic_labeling.main.feature_computing import compute_feature_vectors
 from utils.helpers import split_number_text
 
 

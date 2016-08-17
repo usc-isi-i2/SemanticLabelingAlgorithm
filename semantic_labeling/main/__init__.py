@@ -7,7 +7,7 @@ from utils.similarity_tests import ks_distribution_sim, mw_histogram_sim, jaccar
 
 sc = SparkContext()
 client = MongoClient()
-db = client["semantic_labeling"]
+db = client["main"]
 
 DEBUG = False
 
