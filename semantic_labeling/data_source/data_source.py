@@ -6,10 +6,10 @@ import operator
 import os
 from collections import Counter, defaultdict
 
+from semantic_labeling.main import KS_NUM, JC_NUM, JC_TEXT, MW_HIST, JC_NAME, TF_TEXT, debug_writer
+from semantic_labeling.main.feature_computing import compute_feature_vectors
 from semantic_labeling.search_engine.indexer import Indexer
 from semantic_labeling.search_engine.searcher import Searcher
-from semantic_labeling.main import KS_NUM, JC_NUM, JC_TEXT, MW_HIST, JC_NAME, TF_TEXT, debug_writer, EL_DIST
-from semantic_labeling.main.feature_computing import compute_feature_vectors
 from semantic_labeling.utils.helpers import split_number_text
 
 
@@ -199,7 +199,7 @@ class Attribute:
         json_obj = {"name": self.name, "source_name": self.source_name, "semantic_type": self.semantic_type,
                     "num_fraction": self.num_fraction, "value_list": self.value_list, KS_NUM: self.numeric_list,
                     JC_NUM: self.numeric_list, JC_TEXT: list(set(self.textual_list)), MW_HIST: self.frequency_list,
-                    EL_DIST: self.numeric_list, JC_NAME: self.name, TF_TEXT: self.text,}
+                    JC_NAME: self.name, TF_TEXT: self.text,}
         return json_obj
 
     def compute_features(self, set_name, labeled_sources, labeled_attrs_map):
@@ -262,5 +262,3 @@ class Attribute:
             if max(self.frequency_list) > 50:
                 self.frequency_list = []
             self.text = " ".join(self.value_list)
-
-
