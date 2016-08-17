@@ -3,3 +3,4 @@ debug.*
 *.mat
 result.txt
 train.csv
+*.pyc
