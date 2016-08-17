@@ -1,6 +1,6 @@
 from scipy.stats import ks_2samp, mannwhitneyu
 
-from utils.helpers import adjust_result
+from semantic_labeling.utils.helpers import adjust_result
 
 
 def ks_distribution_sim(list1, list2, num_fraction1, num_fraction2):
