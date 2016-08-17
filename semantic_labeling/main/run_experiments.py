@@ -1,5 +1,5 @@
-from data_source.data_source import DataSet
-from machine_learning.classifier import Regression, RandomForest
+from semantic_labeling.data_source.data_source import DataSet
+from semantic_labeling.machine_learning.classifier import Regression, RandomForest
 
 
 class SemanticLabeler:

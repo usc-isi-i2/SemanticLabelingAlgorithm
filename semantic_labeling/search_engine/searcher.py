@@ -1,5 +1,5 @@
-from search_engine import es
-from semantic_labeling import TF_TEXT, data_collection
+from semantic_labeling.search_engine import es
+from semantic_labeling.main import TF_TEXT, data_collection
 
 
 class Searcher:
