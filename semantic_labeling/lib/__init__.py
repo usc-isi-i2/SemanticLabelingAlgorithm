@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch
 
-from search.indexer import Indexer
-from search.searcher import Searcher
+from semantic_labeling.search.indexer import Indexer
+from semantic_labeling.search.searcher import Searcher
 
 __author__ = 'alse'
 elastic_search = Elasticsearch()

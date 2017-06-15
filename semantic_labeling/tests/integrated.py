@@ -1,10 +1,10 @@
 from collections import defaultdict
 
-from lib.utils import is_column_based, is_tree_based
-from main import sc
+from semantic_labeling.lib.utils import is_column_based, is_tree_based
+from semantic_labeling.main import sc
 from numeric import *
-from tests.label import label_text_test
-from tests.textual import *
+from semantic_labeling.tests.label import label_text_test
+from semantic_labeling.tests.textual import *
 
 __author__ = 'alse'
 

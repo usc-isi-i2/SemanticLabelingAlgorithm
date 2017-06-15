@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
-from lib import searcher
-from lib.utils import is_tree_based
-from tests.integrated import feature_list, tree_feature_list
+from semantic_labeling.lib import searcher
+from semantic_labeling.lib.utils import is_tree_based
+from semantic_labeling.tests.integrated import feature_list, tree_feature_list
 
 
 class MyRandomForest:

@@ -6,8 +6,8 @@ from collections import defaultdict
 from numpy import percentile, array
 from numpy.random import choice
 
-from lib.utils import split_number_text, not_allowed_chars, get_distribution
-from tests.integrated import get_test_results
+from semantic_labeling.lib.utils import split_number_text, not_allowed_chars, get_distribution
+from semantic_labeling.tests.integrated import get_test_results
 
 __author__ = 'alse'
 

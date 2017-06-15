@@ -1,6 +1,6 @@
 from elasticsearch.helpers import scan
 
-from lib.utils import get_index_name
+from semantic_labeling.lib.utils import get_index_name
 
 __author__ = "minh"
 

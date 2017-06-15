@@ -1,7 +1,7 @@
 from numpy import percentile
 from scipy.stats import mannwhitneyu, f_oneway, ks_2samp, ttest_ind
 
-from tests import balance_result
+from semantic_labeling.tests import balance_result
 
 __author__ = 'alse'
 

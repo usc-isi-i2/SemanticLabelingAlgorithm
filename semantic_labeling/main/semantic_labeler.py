@@ -6,12 +6,12 @@ from collections import OrderedDict, defaultdict
 
 import time
 
-from lib import searcher, indexer
-from lib.column import Column
-from lib.source import Source
-from lib.utils import not_allowed_chars
-from main import file_write
-from main.random_forest import MyRandomForest
+from semantic_labeling.search import searcher, indexer
+from semantic_labeling.lib.column import Column
+from semantic_labeling.lib.source import Source
+from semantic_labeling.lib.utils import not_allowed_chars
+from semantic_labeling.main import file_write
+from semantic_labeling.main.random_forest import MyRandomForest
 
 __author__ = 'alse'
 

@@ -3,8 +3,8 @@ from distutils.core import setup
 setup(
     name='SemanticLabeling',
     version='1.0',
-    packages=["lib", "search",
-              "main", "tests"],
+    packages=["semantic_labeling", "semantic_labeling.lib", "semantic_labeling.search",
+              "semantic_labeling.main", "semantic_labeling.tests"],
     url='',
     license='',
     author='Minh Pham',

@@ -4,8 +4,8 @@ import re
 from xml.etree import ElementTree
 
 from column import Column
-from lib import indexer
-from lib.utils import not_allowed_chars
+from semantic_labeling.lib import indexer
+from semantic_labeling.lib.utils import not_allowed_chars
 
 __author__ = 'alse'
 

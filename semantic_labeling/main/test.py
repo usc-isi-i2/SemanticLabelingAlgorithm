@@ -17,7 +17,6 @@ from collections import OrderedDict
 #         os.remove(os.path.join("data/datasets/dbpedia_full/csv", fname))
 import pandas as pd
 
-from lib.source import Source
 
 for fname in os.listdir("data/datasets/dbpedia_full/csv"):
     if ".DS" in fname:

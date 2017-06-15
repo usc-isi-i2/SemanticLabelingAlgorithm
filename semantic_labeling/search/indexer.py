@@ -1,4 +1,4 @@
-from lib.utils import get_index_name
+from semantic_labeling.lib.utils import get_index_name
 from elasticsearch.helpers import scan, bulk
 
 
@@ -72,7 +72,7 @@ class Indexer:
             if column.semantic_type:
                 self.index_column(column, source.index_name, index_config)
 
-    def delete_column(self, , attr_name, source_name, index_config):
+    def delete_column(self, attr_name, source_name, index_config):
         bulk_deletes = []
         for result in scan(self.es, query={
             "query": {

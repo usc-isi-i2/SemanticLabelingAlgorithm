@@ -4,8 +4,8 @@ from numpy import median
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from tests import balance_result
-from tests.label import jaccard_similarity
+from semantic_labeling.tests import balance_result
+from semantic_labeling.tests.label import jaccard_similarity
 
 __author__ = 'alse'
 
