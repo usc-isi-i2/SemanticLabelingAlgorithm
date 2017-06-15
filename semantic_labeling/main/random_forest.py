@@ -44,25 +44,26 @@ class MyRandomForest:
         if os.path.exists(self.model_path):
             print "Loading ..."
             self.model = joblib.load("model/lr.pkl")
-        train_df = self.generate_train_data(train_sizes)
-        train_df = pd.DataFrame(train_df)
-        train_df = train_df.replace([np.inf, -np.inf, np.nan], 0)
-        # self.model = LogisticRegression(n_estimators=200, combination="majority_voting")
-        self.model = LogisticRegression(class_weight="balanced")
-        # print train_df
-        # sample_weight = train_df['label'].apply(lambda x: 15 if x else 1)
-        # print sample_weight
-        if is_tree_based:
-            self.model.fit(train_df[tree_feature_list], train_df['label'])
         else:
-            # self.model.fit(train_df[feature_list], train_df['label'])
-            self.model.fit(train_df[feature_list], train_df['label'])
+            train_df = self.generate_train_data(train_sizes)
+            train_df = pd.DataFrame(train_df)
+            train_df = train_df.replace([np.inf, -np.inf, np.nan], 0)
+            # self.model = LogisticRegression(n_estimators=200, combination="majority_voting")
+            self.model = LogisticRegression(class_weight="balanced")
+            # print train_df
+            # sample_weight = train_df['label'].apply(lambda x: 15 if x else 1)
+            # print sample_weight
+            if is_tree_based:
+                self.model.fit(train_df[tree_feature_list], train_df['label'])
+            else:
+                # self.model.fit(train_df[feature_list], train_df['label'])
+                self.model.fit(train_df[feature_list], train_df['label'])
 
-            # train_df[feature_list + ["label"]].to_csv("train.csv", mode='w', header=True)
-            # cost = len(train_df[train_df['label'] == False]) / len(train_df[train_df['label'] == True])
-            # self.model.fit(train_df[feature_list].as_matrix(), train_df['label'].as_matrix(),
-            #                np.tile(np.array([1, cost, 0, 0]), (train_df.shape[0], 1)))
-        joblib.dump(self.model, self.model_path)
+                # train_df[feature_list + ["label"]].to_csv("train.csv", mode='w', header=True)
+                # cost = len(train_df[train_df['label'] == False]) / len(train_df[train_df['label'] == True])
+                # self.model.fit(train_df[feature_list].as_matrix(), train_df['label'].as_matrix(),
+                #                np.tile(np.array([1, cost, 0, 0]), (train_df.shape[0], 1)))
+            joblib.dump(self.model, self.model_path)
 
     def predict(self, test_data, true_type):
         test_df = pd.DataFrame(test_data)
