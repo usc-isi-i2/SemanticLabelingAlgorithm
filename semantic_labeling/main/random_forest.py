@@ -2,6 +2,7 @@ import os
 
 import numpy as np
 import pandas as pd
+from sklearn.externals import joblib
 from sklearn.linear_model import LogisticRegression
 
 from semantic_labeling.lib import searcher
@@ -10,10 +11,10 @@ from semantic_labeling.tests.integrated import feature_list, tree_feature_list
 
 
 class MyRandomForest:
-    def __init__(self, data_sets, dataset_map):
+    def __init__(self, data_sets=None, dataset_map=None, model_path=None):
         self.data_sets = data_sets
         self.dataset_map = dataset_map
-        self.model_path = os.path.join("data/train_models", "museum_column_1_%s.pickle")
+        self.model_path = model_path
         self.model = None
         self.feature_selector = None
 
@@ -41,11 +42,11 @@ class MyRandomForest:
 
     def train(self, train_sizes):
         if os.path.exists(self.model_path):
-            train_df = self.load()
-        else:
-            train_df = self.generate_train_data(train_sizes)
-            train_df = pd.DataFrame(train_df)
-            train_df = train_df.replace([np.inf, -np.inf, np.nan], 0)
+            print "Loading ..."
+            self.model = joblib.load("model/lr.pkl")
+        train_df = self.generate_train_data(train_sizes)
+        train_df = pd.DataFrame(train_df)
+        train_df = train_df.replace([np.inf, -np.inf, np.nan], 0)
         # self.model = LogisticRegression(n_estimators=200, combination="majority_voting")
         self.model = LogisticRegression(class_weight="balanced")
         # print train_df
@@ -61,13 +62,7 @@ class MyRandomForest:
             # cost = len(train_df[train_df['label'] == False]) / len(train_df[train_df['label'] == True])
             # self.model.fit(train_df[feature_list].as_matrix(), train_df['label'].as_matrix(),
             #                np.tile(np.array([1, cost, 0, 0]), (train_df.shape[0], 1)))
-            print self.model.coef_
-
-    def save(self, df):
-        df.to_pickle(self.model_path)
-
-    def load(self):
-        return pd.read_pickle(self.model_path)
+        joblib.dump(self.model, self.model_path)
 
     def predict(self, test_data, true_type):
         test_df = pd.DataFrame(test_data)

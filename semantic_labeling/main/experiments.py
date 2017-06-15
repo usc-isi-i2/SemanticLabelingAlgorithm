@@ -11,8 +11,8 @@ __author__ = 'alse'
 
 def run_experiments():
     semantic_labeler = SemanticLabeler()
-    semantic_labeler.read_data_sources(["new_data", "soccer"])
-    semantic_labeler.train_semantic_types(["new_data", "soccer"])
+    semantic_labeler.read_data_sources(["soccer"])
+    semantic_labeler.train_semantic_types(["soccer"])
     # semantic_labeler.train_random_forest([11], ["soccer"])
     # semantic_labeler.test_semantic_types("dbpedia", [1, 2, 3, 4, 5])
     # semantic_labeler.test_semantic_types("museum", [1, 2, 3, 4, 5])
@@ -43,7 +43,7 @@ def run_experiments():
     # semantic_labeler.test_semantic_types("weather", [2])
     # semantic_labeler.test_semantic_types("dbpedia", [1, 2, 3, 4, 5])
     # semantic_labeler.test_semantic_types("museum", [1, 2, 3, 4, 5])
-    semantic_labeler.test_semantic_types("new_data", [1])
+    # semantic_labeler.test_semantic_types("new_data", [1])
     # semantic_labeler.test_semantic_types("weather", [1, 2, 3])
     # semantic_labeler.test_semantic_types("weather", [2])
     # semantic_labeler.test_semantic_types("soccer", [6])

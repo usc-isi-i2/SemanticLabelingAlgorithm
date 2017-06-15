@@ -1,6 +1,6 @@
 import re
 
-from main import sc
+from semantic_labeling.main import sc
 
 __author__ = 'minh'
 #
