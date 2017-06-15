@@ -1,33 +1,20 @@
-from pymongo import MongoClient
+import os
 
-from pyspark import SparkContext
-from semantic_labeling.utils.similarity_tests import ks_distribution_sim, mw_histogram_sim, jaccard_num_sim, jaccard_str_sim, \
-    jaccard_name_sim
+from gensim.models import Word2Vec
+
+from pyspark import SparkContext, SQLContext
 
 sc = SparkContext()
-client = MongoClient()
-db = client["semantic_labeling"]
+sql_context = SQLContext(sc)
 
-DEBUG = False
+root_dir = os.path.abspath(os.path.join(os.path.realpath(__file__), '..'))
+data_dir = os.path.join(root_dir, "data/datasets")
+train_model_dir = os.path.join(root_dir, "data/train_models")
 
-data_collection = db["data"]
-relation_collection = db["relation"]
-coop_collection = db["coop"]
+# word2vec = Word2Vec.load_word2vec_format(os.path.join("/Users/minhpham/tools/", 'GoogleNews-vectors-negative300.bin'), binary=True)
 
-debug_writer = open('debug.txt', 'w')
+file_write = open('debug.txt', 'w')
 
-KS_NUM = "ks_num"
-MW_HIST = "mw_hist"
-JC_NUM = "jc_num"
-JC_TEXT = "jc_text"
-JC_NAME = "jc_name"
-TF_TEXT = "tf_text"
-JC_FULL_TEXT = "jc_full_text"
-KS_LENGTH = "ks_length"
-KS_FRAC = "ks_frac"
-
-
-similarity_test_map = {KS_NUM: ks_distribution_sim, MW_HIST: mw_histogram_sim, JC_NUM: jaccard_num_sim,
-                       JC_TEXT: jaccard_str_sim, JC_NAME: jaccard_name_sim}
-
-features = [JC_TEXT, JC_NUM, TF_TEXT, KS_NUM, MW_HIST, JC_NAME]
+logger = sc._jvm.org.apache.log4j
+logger.LogManager.getLogger("org").setLevel(logger.Level.FATAL)
+logger.LogManager.getLogger("akka").setLevel(logger.Level.FATAL)
