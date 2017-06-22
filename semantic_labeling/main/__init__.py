@@ -1,7 +1,5 @@
 import os
 
-from gensim.models import Word2Vec
-
 from pyspark import SparkContext, SQLContext
 
 sc = SparkContext()

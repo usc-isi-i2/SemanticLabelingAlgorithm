@@ -123,6 +123,7 @@ class Column:
         return len(self.textual_list) * 1.0 / (len(self.textual_list) + len(self.numeric_list))
 
     def predict_type(self, train_examples_map, textual_train_map, model):
+        print("aaaaaaaaa")
         feature_vectors = self.generate_candidate_types(train_examples_map, textual_train_map)
         predictions = model.predict(feature_vectors, self.semantic_type)
         predictions = [
