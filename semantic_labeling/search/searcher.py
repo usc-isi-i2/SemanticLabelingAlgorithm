@@ -15,7 +15,7 @@ class Searcher:
                                "constant_score": {
                                    "filter": {
                                        "terms": {
-                                           "sourceName": source_names
+                                           "source": source_names
                                        }
                                    }
                                }
@@ -35,7 +35,7 @@ class Searcher:
                                             "constant_score": {
                                                 "filter": {
                                                     "terms": {
-                                                        "sourceName": source_names
+                                                        "source": source_names
                                                     }
                                                 }
                                             }

@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='SemanticLabeling',
-    version='1.0',
+    version='1.1',
     packages=["semantic_labeling", "semantic_labeling.lib", "semantic_labeling.search",
               "semantic_labeling.main", "semantic_labeling.tests"],
     url='',
