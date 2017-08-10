@@ -131,7 +131,7 @@ class Column:
             for prediction in predictions]
         prediction_map = defaultdict(lambda: [])
         for prediction in predictions:
-            prediction_map[prediction[0][0]].append(prediction[1])
+            prediction_map[prediction[0][0]].append((prediction[1], prediction[0][1]))
         return sorted(prediction_map.items(), reverse=True)
 
     def generate_candidate_types(self, train_examples_map, textual_train_map, is_labeled=False):
