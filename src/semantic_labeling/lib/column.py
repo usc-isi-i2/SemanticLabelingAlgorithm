@@ -1,9 +1,7 @@
-import locale
-import re
 import os
+import re
 from collections import defaultdict
 
-from numpy import percentile, array
 from numpy.random import choice
 
 from semantic_labeling.lib.utils import split_number_text, not_allowed_chars, get_distribution
@@ -69,7 +67,7 @@ class Column:
             self.textual_list.append(text)
 
         if numbers:
-            self.numeric_list.append(max([locale.atof(v[0]) for v in numbers]))
+            self.numeric_list.extend([num[0] for num in numbers])
 
     def prepare_data(self):
         self.word2vec = []

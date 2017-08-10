@@ -43,7 +43,7 @@ class MyRandomForest:
     def train(self, train_sizes):
         if os.path.exists(self.model_path):
             print "Loading ..."
-            self.model = joblib.load("model/lr.pkl")
+            self.model = joblib.load(self.model_path)
         else:
             train_df = self.generate_train_data(train_sizes)
             train_df = pd.DataFrame(train_df)

@@ -4,7 +4,7 @@ import time
 
 import sys
 
-from semantic_labeler import SemanticLabeler
+from semantic_labeling.main.semantic_labeler import SemanticLabeler
 
 __author__ = 'alse'
 

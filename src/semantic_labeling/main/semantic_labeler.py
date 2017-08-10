@@ -114,13 +114,13 @@ class SemanticLabeler:
 
 
     def train_random_forest(self, train_sizes, data_sets):
-        self.random_forest = MyRandomForest(data_sets, self.dataset_map)
+        self.random_forest = MyRandomForest(data_sets, self.dataset_map, model_path="model/lr.pkl")
         self.random_forest.train(train_sizes)
 
     def train_semantic_types(self, dataset_list):
         for name in dataset_list:
             index_config = {'name': re.sub(not_allowed_chars, "!", name)}
-            indexer.init_analyzers(index_config)
+            # indexer.init_analyzers(index_config)
             source_map = self.dataset_map[name]
             for idx in range(len(source_map.keys())):
                 source = source_map[source_map.keys()[idx]]
