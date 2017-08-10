@@ -1,3 +1,4 @@
+import locale
 import os
 import re
 from collections import defaultdict
@@ -67,7 +68,7 @@ class Column:
             self.textual_list.append(text)
 
         if numbers:
-            self.numeric_list.extend([num[0] for num in numbers])
+            self.numeric_list.extend([locale.atof(num[0]) for num in numbers])
 
     def prepare_data(self):
         self.word2vec = []
