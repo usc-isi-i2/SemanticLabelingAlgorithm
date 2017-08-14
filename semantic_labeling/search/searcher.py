@@ -34,10 +34,12 @@ class Searcher:
                 result = self.es.search(index=get_index_name(index_config), doc_type='service',
                                         body={
                                             "query": {
-                                                "match": {
-                                                    "textual": text,
-                                                },
-                                                "constant_score": {
+                                                "bool": {
+                                                    "must": {
+                                                        "match": {
+                                                            "textual": text
+                                                        }
+                                                    },
                                                     "filter": {
                                                         "terms": {
                                                             "source": source_names
@@ -52,7 +54,7 @@ class Searcher:
                                         body={
                                             "query": {
                                                 "match": {
-                                                    "textual": text,
+                                                    "textual": text
                                                 }
                                             }
                                         },
