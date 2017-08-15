@@ -34,9 +34,9 @@ data_tests_map = {"values": [ABBR_TEST], 'word2vec': [WORD2VEC_TEST],
                   'numeric_list': [KS_TEST, COVER_TEST, W_TEST, JACCARD_TEST], "char_lengths": [CHAR_LEN_TEST],
                   "word_lengths": [STR_LEN_TEST], "name": [LBL_TEST], "histogram": [MW_TEST]}
 
-feature_list = [LBL_TEST, COVER_TEST, JACCARD_TEST, TF_IDF_TEST]
+feature_list = [LBL_TEST, COVER_TEST, JACCARD_TEST, TF_IDF_TEST, MW_NUM_TEST]
 text_list = [ABBR_TEST, TF_IDF_TEST]
-number_list = [COVER_TEST, JACCARD_TEST]
+number_list = [COVER_TEST, JACCARD_TEST, MW_NUM_TEST]
 
 tree_feature_list = []
 for feature in feature_list:
