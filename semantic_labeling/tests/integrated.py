@@ -31,7 +31,7 @@ feature_tests_map = {ANOVA_TEST: anova_test, KS_TEST: kolmogorov_smirnov_test, J
                      CHAR_LEN_TEST: char_len_test, STR_LEN_TEST: len_test}
 
 data_tests_map = {"values": [ABBR_TEST], 'word2vec': [WORD2VEC_TEST],
-                  'numeric_list': [KS_TEST, COVER_TEST, W_TEST, JACCARD_TEST], "char_lengths": [CHAR_LEN_TEST],
+                  'numeric_list': [KS_TEST, COVER_TEST, W_TEST, JACCARD_TEST, MW_NUM_TEST], "char_lengths": [CHAR_LEN_TEST],
                   "word_lengths": [STR_LEN_TEST], "name": [LBL_TEST], "histogram": [MW_TEST]}
 
 feature_list = [LBL_TEST, COVER_TEST, JACCARD_TEST, TF_IDF_TEST, MW_NUM_TEST]
