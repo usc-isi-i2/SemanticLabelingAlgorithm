@@ -46,10 +46,10 @@ def anova_test(train_examples, test_examples):
 
 def coverage_test(train_examples, test_examples, num1, num2):
     if len(train_examples) > 1 and len(test_examples) > 1:
-        max1 = percentile(train_examples, 75)
-        min1 = percentile(train_examples, 25)
-        max2 = percentile(test_examples, 75)
-        min2 = percentile(test_examples, 25)
+        max1 = percentile(train_examples, 100)
+        min1 = percentile(train_examples, 0)
+        max2 = percentile(test_examples, 100)
+        min2 = percentile(test_examples, 0)
         max3 = max(max1, max2)
         min3 = min(min1, min2)
         if min2 > max1 or min1 > max2:
